@@ -32,7 +32,6 @@ public class RNForwardCallsModule extends ReactContextBaseJavaModule {
     String uri = "tel:**21*" + Uri.encode(phoneNumber+"#");
     Intent intent = new Intent(Intent.ACTION_CALL);
     intent.setData(Uri.parse(uri));
-    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
     this.reactContext.startActivity(intent);
   }
   @ReactMethod
