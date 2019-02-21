@@ -29,7 +29,7 @@ public class RNForwardCallsModule extends ReactContextBaseJavaModule {
 
   @ReactMethod
   public void unconditionalForwarding(String phoneNumber) {
-    String uri = "tel:**21*" + Uri.encode(phoneNumber+"#");
+    String uri = "tel:*21*" + Uri.encode(phoneNumber+"#");
     Intent intent = new Intent(Intent.ACTION_CALL);
     intent.setData(Uri.parse(uri));
     this.reactContext.startActivity(intent);
